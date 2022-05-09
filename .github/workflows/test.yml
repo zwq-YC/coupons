@@ -21,6 +21,7 @@ jobs:
       - name: Install Dependency       
         run: |
           npm install
+          npm install parse
           npm install got
           npm install tough-cookie         
           node ./test.js  #脚本存在根目录scripts文件夹下
