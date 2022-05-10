@@ -8,7 +8,7 @@ on:
     - cron: '0 16 * * *'   #国际标准时间，北京时间+8，即24点钟
  
 jobs:
-  run-csjs:
+  run-quanjs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main  #采用main分支下的
