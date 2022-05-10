@@ -24,4 +24,4 @@ jobs:
           npm install parse
           npm install got
           npm install tough-cookie         
-          node ./test.html  #脚本存在根目录scripts文件夹下
+          node ./test.js  #脚本存在根目录scripts文件夹下
