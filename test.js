@@ -1,4 +1,4 @@
-<script>
+
     script.type="text/javascript";  
     script.src="./jquery/jquery-2.1.1.min.js";       
     quan()
@@ -10,15 +10,13 @@
         data: {},
         success: function(res) {
             var data = res.data.msg
-            alert(data)
+            console.log(data)
             if (data == "当日已领取优惠券") {
                 clearInterval(i)
-                alert("领取成功")
+                
             }
         },
         error: function() {}
         })
     }
     var i = setInterval("quan()", 10000);
-
-</script>
