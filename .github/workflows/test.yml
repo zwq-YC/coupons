@@ -23,5 +23,6 @@ jobs:
           npm install
           npm install parse
           npm install got
+          npm install xmlhttprequest
           npm install tough-cookie         
           node ./test.js  #脚本存在根目录scripts文件夹下
