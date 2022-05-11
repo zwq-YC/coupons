@@ -1,4 +1,4 @@
-name: sheng
+name: couponsStock
  
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - cron: '*/60  * * * *'   #国际标准时间，北京时间+8，即24点钟
  
 jobs:
-  run-shengjs:
+  run-couponsStock:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main  #采用main分支下的
@@ -25,4 +25,4 @@ jobs:
           npm install got
           npm install xmlhttprequest
           npm install tough-cookie         
-          node ./sheng.js  #脚本存在根目录scripts文件夹下
+          node ./couponsStock.js  #脚本存在根目录scripts文件夹下
