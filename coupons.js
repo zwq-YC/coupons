@@ -3,7 +3,7 @@ coupons()
 function coupons(){
     
     var myDate = new Date()
-    var hours = myDate.getHour()
+    var hours = myDate.getHours()
     if (hours == 0){
         var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
     var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
