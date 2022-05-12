@@ -1,8 +1,11 @@
 
 coupons()
 function coupons(){
-
-    var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+    
+    var myDate = new Date()
+    var hours = myDate.getHour()
+    if (hours == 0){
+        var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
     var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
     httpRequest.open('GET', 'http://jieyou.pro:9023/jp/crowdFoundingUser/grantFiveYuanCoupon?mobile=17779560253&userId=1075093', true);//第二步：打开连接  将请求参数写在url中  ps:"http://localhost:8080/rest/xxx"
     httpRequest.send();//第三步：发送请求  将请求参数写在URL中
@@ -29,12 +32,13 @@ function coupons(){
             }else if (data == "来晚了，券已领完") {
                 var url = urlBase + 'taoLate'
                 clearInterval(i)
-            }
-          
-                
-                
+            }     
         }
     };
+    } else {
+        console.log("时间未到")
+    }
+    
 }
 var i = setInterval(function(){
     coupons()
